@@ -1,8 +1,5 @@
 <script>
 	import { onMount } from 'svelte';
-	import ClickerGame from './day 5/ClickerGame.svelte';
-	import HorseRace from './day 2/HorseRace.svelte';
-	import SolarSystem from './day4-2/SolarSystem.svelte';
 
 	let scrollY = 0;
 
@@ -18,7 +15,7 @@
 <div class="relative overflow-hidden">
 	<!-- Hero Section with Parallax Cityscape -->
 	<section
-		class="relative flex h-screen items-center justify-center bg-gradient-to-b from-blue-300 via-blue-200 to-green-400"
+		class="relative flex h-screen items-center justify-center bg-gradient-to-b from-purple-900 via-blue-900 to-indigo-900"
 	>
 		<!-- Stars Background (slowest) -->
 		<div class="absolute inset-0 opacity-80" style="transform: translateY({scrollY * 0.1}px)">
@@ -118,7 +115,7 @@
 
 		<!-- Title Text (no parallax - stays fixed) -->
 		<div class="relative z-20 text-center text-white">
-			<h1 class="mb-4 text-6xl font-bold drop-shadow-lg">My Portfolio</h1>
+			<h1 class="mb-4 text-6xl font-bold drop-shadow-lg">Night City</h1>
 			<p class="text-xl opacity-90 drop-shadow">Scroll down to explore the parallax effect</p>
 			<div class="mt-8 animate-bounce">
 				<svg class="mx-auto h-8 w-8" fill="currentColor" viewBox="0 0 20 20">
@@ -132,26 +129,26 @@
 		</div>
 	</section>
 
-	<!-- My projects-->
-	<!-- About Me -->
+	<!-- Content Sections -->
 	<section class="relative z-30 bg-gray-900 text-white">
 		<div class="mx-auto max-w-4xl px-8 py-20">
-			<div class="flex w-full items-center rounded-full bg-gray-700 p-2">
-				<div class="flex h-12 w-12 items-center justify-center rounded-full border bg-black">
-					<div class="profile-image h-10 w-10 rounded-full border bg-cover bg-center"></div>
-				</div>
-				<div class="ml-2">
-					<h2 class="ml-2 text-4xl font-bold">Eric</h2>
-					<div class="text-xs italic">Programmer</div>
-				</div>
-			</div>
-
+			<h2 class="mb-8 text-4xl font-bold">Welcome to the City</h2>
 			<div class="grid gap-12 md:grid-cols-2">
 				<div>
-					<h3 class="mb-4 text-2xl font-semibold text-cyan-400">About Me</h3>
-					<p class="text-lg leading-relaxed text-gray-300">e</p>
+					<h3 class="mb-4 text-2xl font-semibold text-cyan-400">🏙️ Urban Life</h3>
+					<p class="text-lg leading-relaxed text-gray-300">
+						Experience the vibrant energy of city life where dreams meet reality. Towering
+						skyscrapers reach toward the stars, each window telling a unique story of ambition,
+						creativity, and human connection.
+					</p>
 				</div>
-				<div></div>
+				<div>
+					<h3 class="mb-4 text-2xl font-semibold text-purple-400">🌃 Night Lights</h3>
+					<p class="text-lg leading-relaxed text-gray-300">
+						As darkness falls, the city transforms into a symphony of light. Neon signs dance across
+						building facades, creating an electric atmosphere that never sleeps.
+					</p>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -159,44 +156,88 @@
 	<section class="relative z-30 bg-gray-800 text-white">
 		<div class="mx-auto max-w-4xl px-8 py-20">
 			<h2 class="mb-8 text-center text-4xl font-bold">My Projects</h2>
-			<div class="flex flex-col space-y-5">
+			<div class="grid gap-8 md:grid-cols-3">
 				<div class="rounded-lg bg-gray-700 p-6 text-center">
-					<h3 class="mb-3 text-xl font-semibold text-blue-400">Clicker Game</h3>
+					<div class="mb-4 text-4xl"></div>
+					<h3 class="mb-3 text-xl font-semibold text-blue-400">ClickerGame.svelte</h3>
+
 					<ClickerGame />
+					<p class="text-gray-300">
+						Magnificent towers that define the city skyline and house thousands of dreams.
+					</p>
 				</div>
 				<div class="rounded-lg bg-gray-700 p-6 text-center">
-					<h3 class="mb-3 text-xl font-semibold text-blue-400">Horse Race Simulator</h3>
-					<HorseRace />
+					<div class="mb-4 text-4xl">🚗</div>
+					<h3 class="mb-3 text-xl font-semibold text-green-400">Transport</h3>
+					<p class="text-gray-300">
+						Efficient networks connecting every corner of the metropolitan area.
+					</p>
 				</div>
 				<div class="rounded-lg bg-gray-700 p-6 text-center">
-					<h3 class="mb-3 text-xl font-semibold text-green-400">Solar System</h3>
-					<div class="overflow-hidden rounded">
-						<SolarSystem />
-					</div>
+					<div class="mb-4 text-4xl">🎭</div>
+					<h3 class="mb-3 text-xl font-semibold text-pink-400">Culture</h3>
+					<p class="text-gray-300">
+						Rich arts, entertainment, and diverse communities creating vibrant neighborhoods.
+					</p>
 				</div>
 			</div>
-
-			<!-- Footer with scroll-to-top -->
-			<section class="relative z-30 bg-black py-12 text-center text-white">
-				<h3 class="mb-4 text-2xl font-bold"></h3>
-				<p class="mb-6 text-gray-400"></p>
-				<button
-					on:click={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-					class="rounded-full bg-gradient-to-r from-blue-500 to-purple-500 px-8 py-3 font-semibold transition-transform duration-200 hover:scale-105"
-				>
-					Back to Top ⬆️
-				</button>
-			</section>
 		</div>
+	</section>
+
+	<section class="relative z-30 bg-gray-900 text-white">
+		<div class="mx-auto max-w-4xl px-8 py-20">
+			<h2 class="mb-8 text-4xl font-bold">The Parallax Effect</h2>
+			<div class="prose max-w-none prose-invert">
+				<h3 class="mb-4 text-2xl font-semibold text-yellow-400">🎨 What We're Learning</h3>
+				<ul class="space-y-3 text-lg">
+					<li>
+						<strong>CSS Transforms:</strong>
+						<code class="rounded bg-gray-700 px-2 py-1">transform: translateY()</code>
+					</li>
+					<li>
+						<strong>Scroll Events:</strong>
+						<code class="rounded bg-gray-700 px-2 py-1">window.scrollY</code>
+					</li>
+					<li>
+						<strong>Layering:</strong> <code class="rounded bg-gray-700 px-2 py-1">z-index</code>
+						and <code class="rounded bg-gray-700 px-2 py-1">position: absolute</code>
+					</li>
+					<li>
+						<strong>Gradients:</strong>
+						<code class="rounded bg-gray-700 px-2 py-1">bg-gradient-to-b</code>
+					</li>
+					<li>
+						<strong>Animations:</strong>
+						<code class="rounded bg-gray-700 px-2 py-1">animate-pulse</code>,
+						<code class="rounded bg-gray-700 px-2 py-1">animate-bounce</code>
+					</li>
+				</ul>
+
+				<h3 class="mt-8 mb-4 text-2xl font-semibold text-green-400">🔧 How It Works</h3>
+				<p class="text-lg text-gray-300">
+					Different elements move at different speeds as you scroll, creating depth and immersion.
+					The stars move slowest, mountains medium speed, and buildings fastest, creating the
+					illusion of 3D space on a 2D screen!
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer with scroll-to-top -->
+	<section class="relative z-30 bg-black py-12 text-center text-white">
+		<h3 class="mb-4 text-2xl font-bold">Keep Exploring! 🚀</h3>
+		<p class="mb-6 text-gray-400">Scroll back up to see the parallax effect in reverse</p>
+		<button
+			on:click={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+			class="rounded-full bg-gradient-to-r from-blue-500 to-purple-500 px-8 py-3 font-semibold transition-transform duration-200 hover:scale-105"
+		>
+			Back to Top ⬆️
+		</button>
 	</section>
 </div>
 
 <style>
 	:global(html) {
 		scroll-behavior: smooth;
-	}
-
-	.profile-image {
-		background-image: url(https://images.unsplash.com/photo-1635686692794-b0ce6337386b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2VvdWwlMjB0b3dlcnxlbnwwfHwwfHx8MA%3D%3D);
 	}
 </style>
